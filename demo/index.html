@@ -1,0 +1,115 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="timeline.css"> -->
+  <style>
+    .canvas-container {
+      /* padding: 20px;
+      margin: 20px; */
+      width: 100%;
+      height: 500px;
+    }
+    #canvas {
+      /* background-color : #fff;
+      position: absolute; */
+    }
+    #options-container {
+      height: 100px;
+    }
+    #options-container #options #option-item {
+      display: flex;
+      height: 35px;
+    }
+    #options-container #options #option-item div:nth-child(1) {
+      width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #options-container #options #option-item div:nth-child(2) {
+      width: 200px;
+    }
+    #options-container #options #option-item div:nth-child(2) select {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="options-container">
+    <div id='options' >
+      <div id='option-item'>
+        <div>수정 내역 보기</div>
+        <div>
+          <select onchange="handleChangeShowGroupMove(event)">
+            <option value='all'>모두보기</option>
+            <option value='module' selected>모듈이동만 보기</option>
+            <option value='group'>그룹이동만 보기</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="canvas-container">
+    <canvas id='canvas' ></canvas>
+  </div>
+
+  <script type="text/javascript" src="./modulesArray.js"></script>
+  <script type="text/javascript" src="./arrayCompare.js"></script>
+  <script type="text/javascript">
+    (function() {
+      const options = {
+        // Canvas Options
+        container1Width: 300,
+        container2Width: 200,
+        container3Width: 300,
+        canvasPadding: 20,
+        elementGap: 20,
+        rectWidth: 200,
+        rectHeight: 30,
+        margin: 20,
+
+        // Line Options
+        lineWidth: 1,
+        lineStyle: 'RGBA(57, 150, 250, 1.00)',
+        lineStyleStayed: '#000000',
+        lineStyleMoved: 'RGBA(57, 150, 250, 1.00)',
+        lineStyleAdded: 'green',
+        lineStyleRemoved: 'red',
+
+        // Arrow Options
+        fillArrow: true,
+        fillStyle: '#000000',
+        arrowSize: 10,
+        arrowStart: true,
+        arrowEnd: true,
+
+        // Graph Options
+        showModuleMove: true,
+        showGroupMove: false
+      };
+      const canvas = document.querySelector('#canvas');
+      const arrayCompare = new ArrayCompare({ canvas, prev, current, options });
+      arrayCompare.draw();
+      window.ArrayCompare = arrayCompare;
+    })();
+
+    function handleChangeShowGroupMove(evt) {
+      const arrayCompare = window.ArrayCompare;
+      let value = evt.target.value;
+      if (value === 'all') {
+        arrayCompare.options.showModuleMove = true;
+        arrayCompare.options.showGroupMove = true;
+      } else if (value === 'module') {
+        arrayCompare.options.showModuleMove = true;
+        arrayCompare.options.showGroupMove = false;
+      } else {
+        arrayCompare.options.showModuleMove = false;
+        arrayCompare.options.showGroupMove = true;
+      }
+      arrayCompare.redraw();
+    }
+  </script>
+  </script>
+</body>
+</html>
