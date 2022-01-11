@@ -3,7 +3,7 @@
 It compares changed history between two arrays.  
 It is wriiten in vanilla script so that you use it in any other UI framework and the browser.
 
-~[Image](https://postfiles.pstatic.net/MjAyMjAxMTFfMjA0/MDAxNjQxODgyMjg3MjI0.DxHPK4nGZEGL09HnRVrJdI9T7dWG7YVJoLca9-ZBgrog.doVPVHJ67v7KCZ9h1gbeE6M60bP8B-UTEvYGyLPX6YUg.PNG.mansoo1500/devnology.png?type=w580)  
+![Image](https://postfiles.pstatic.net/MjAyMjAxMTFfMjA0/MDAxNjQxODgyMjg3MjI0.DxHPK4nGZEGL09HnRVrJdI9T7dWG7YVJoLca9-ZBgrog.doVPVHJ67v7KCZ9h1gbeE6M60bP8B-UTEvYGyLPX6YUg.PNG.mansoo1500/devnology.png?type=w580)  
 
 # Installation
 ```
