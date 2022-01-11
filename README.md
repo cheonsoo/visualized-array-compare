@@ -43,3 +43,34 @@ in order to redraw
 this.visualizedArrayCompare.options.arrowStart = true;
 this.visualizedArrayCompare.redraw();
 ```
+
+### Options
+```
+container1Width: 300,
+container2Width: 200,
+container3Width: 300,
+canvasPadding: 20,
+elementGap: 20,
+rectWidth: 200,
+rectHeight: 30,
+margin: 20,
+
+// Line Options
+lineWidth: 1,
+lineStyle: 'RGBA(57, 150, 250, 1.00)',
+lineStyleStayed: '#000000',
+lineStyleMoved: 'RGBA(57, 150, 250, 1.00)',
+lineStyleAdded: 'green',
+lineStyleRemoved: 'red',
+
+// Arrow Options
+fillArrow: true,
+fillStyle: '#000000',
+arrowSize: 10,
+arrowStart: true,
+arrowEnd: true,
+
+// Graph Options
+showModuleMove: true,
+showGroupMove: false
+```
