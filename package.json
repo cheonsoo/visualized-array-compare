@@ -1,6 +1,6 @@
 {
   "name": "visualized-array-compare",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "main": "index.js",
   "repository": "https://github.com/cheonsoo/visualized-array-compare.git",
   "author": "mansoo.app@gmail.com",
