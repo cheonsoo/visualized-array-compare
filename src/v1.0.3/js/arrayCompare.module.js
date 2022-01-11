@@ -1,5 +1,6 @@
 /**
  * @author Chance
+ * @version 1.0.2
  * @description Wrote for personal use
  * @license MIT
  *
@@ -441,6 +442,4 @@ ModuleInfo.prototype.setXY = function(x, y) {
   this.y = y;
 };
 
-// export default ArrayCompare;
-
-console.log("### ArrayCompare");
+export default ArrayCompare;

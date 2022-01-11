@@ -54,8 +54,8 @@
     <canvas id='canvas' ></canvas>
   </div>
 
-  <script type="text/javascript" src="./modulesArray.js"></script>
-  <script type="text/javascript" src="./arrayCompare.js"></script>
+  <script type="text/javascript" src="../data/modulesArray.js"></script>
+  <script type="text/javascript" src="../src/v1.0.3/js/arrayCompare.js"></script>
   <script type="text/javascript">
     (function() {
       const options = {
@@ -79,7 +79,7 @@
 
         // Arrow Options
         fillArrow: true,
-        fillStyle: '#000000',
+        fillStyle: 'RGBA(57, 150, 250, 1.00)',
         arrowSize: 10,
         arrowStart: true,
         arrowEnd: true,
@@ -91,6 +91,7 @@
       const canvas = document.querySelector('#canvas');
       const arrayCompare = new ArrayCompare({ canvas, prev, current, options });
       arrayCompare.draw();
+
       window.ArrayCompare = arrayCompare;
     })();
 
