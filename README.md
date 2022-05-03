@@ -1,7 +1,7 @@
 # Visualize your array changed history
 
 It compares changed history between two arrays.  
-It is wriiten in vanilla script so that you use it in any other UI framework and the browser.
+It is wriiten in vanilla script so that you can use it in any other UI framework and the browser.  
 
 ![Image](https://postfiles.pstatic.net/MjAyMjAxMTFfMjA0/MDAxNjQxODgyMjg3MjI0.DxHPK4nGZEGL09HnRVrJdI9T7dWG7YVJoLca9-ZBgrog.doVPVHJ67v7KCZ9h1gbeE6M60bP8B-UTEvYGyLPX6YUg.PNG.mansoo1500/devnology.png?type=w580)  
 
@@ -46,13 +46,13 @@ this.visualizedArrayCompare.redraw();
 
 ### Options
 ```
-container1Width: 300,
-container2Width: 200,
-container3Width: 300,
+container1Width: 300, // Width of left rectangle area
+container2Width: 200, // Width of arrows area
+container3Width: 300, // Width of right rectangle area
 canvasPadding: 20,
 elementGap: 20,
-rectWidth: 200,
-rectHeight: 30,
+rectWidth: 200, // Rectangle Width
+rectHeight: 30, // Rectangle Height
 margin: 20,
 
 // Line Options
@@ -67,10 +67,10 @@ lineStyleRemoved: 'red',
 fillArrow: true,
 fillStyle: '#000000',
 arrowSize: 10,
-arrowStart: true,
-arrowEnd: true,
+arrowStart: true, // Toggle arrow from start
+arrowEnd: true, // Toggle arrow from end
 
 // Graph Options
-showModuleMove: true,
-showGroupMove: false
+showModuleMove: true, // Show only single move
+showGroupMove: false // Show only group move
 ```
